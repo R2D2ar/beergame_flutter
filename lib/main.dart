@@ -103,64 +103,71 @@ class _MyHomePageState extends State<MyHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 verticalDirection: VerticalDirection.down,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.orange, width: 2.0),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(20))),
-                    alignment: Alignment.center,
-                    width: 450.0,
-                    height: 300.0,
-                    child: Column(children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                        child: Row(
-                          children: const [
-                            Text(
-                              "Login",
-                              style: TextStyle(fontSize: 30),
-                            )
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: TextField(
-                          decoration: InputDecoration(
-                              filled: true,
-                              hoverColor: Colors.orange.shade100,
-                              border: OutlineInputBorder(),
-                              hintText: "Enter Group Id ..."),
-                          controller: groupController,
-
-                          toolbarOptions:
-                              const ToolbarOptions(copy: false, cut: false),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: TextField(
-                          decoration: InputDecoration(
-                              filled: true,
-                              hoverColor: Colors.orange.shade100,
-                              border: OutlineInputBorder(),
-                              hintText: "Enter Role ..."),
-                          controller: roleController,
-                          toolbarOptions:
-                              const ToolbarOptions(copy: false, cut: false),
-                        ),
-                      ),
-                      Row(children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.orange, width: 2.0),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20))),
+                      alignment: Alignment.center,
+                      width: 450.0,
+                      height: 300.0,
+                      child: Column(children: [
                         Padding(
-                          padding: const EdgeInsets.only(right: 10.0),
-                          child: OutlinedButton(
-                              onPressed: _checkInput,
-                              style: ButtonStyle(fixedSize: MaterialStateProperty.all(Size(200, 80))),
-                              child: const Text("Confirm", style: TextStyle(fontSize: 30),)),
-                        )
-                      ], mainAxisAlignment: MainAxisAlignment.end)
-                      //Group
-                    ]),
+                          padding: const EdgeInsets.only(left: 10.0, top: 10.0),
+                          child: Row(
+                            children: const [
+                              Text(
+                                "Login",
+                                style: TextStyle(fontSize: 30),
+                              )
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextField(
+                            decoration: InputDecoration(
+                                filled: true,
+                                hoverColor: Colors.orange.shade100,
+                                border: OutlineInputBorder(),
+                                hintText: "Enter Group Id ..."),
+                            controller: groupController,
+                            toolbarOptions:
+                                const ToolbarOptions(copy: false, cut: false),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextField(
+                            decoration: InputDecoration(
+                                filled: true,
+                                hoverColor: Colors.orange.shade100,
+                                border: OutlineInputBorder(),
+                                hintText: "Enter Role ..."),
+                            controller: roleController,
+                            toolbarOptions:
+                                const ToolbarOptions(copy: false, cut: false),
+                          ),
+                        ),
+                        Row(children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 10.0),
+                            child: OutlinedButton(
+                                onPressed: _checkInput,
+                                style: ButtonStyle(
+                                    fixedSize: MaterialStateProperty.all(
+                                        Size(200, 80))),
+                                child: const Text(
+                                  "Confirm",
+                                  style: TextStyle(fontSize: 30),
+                                )),
+                          )
+                        ], mainAxisAlignment: MainAxisAlignment.end)
+                        //Group
+                      ]),
+                    ),
                   )
                 ]),
           ),
